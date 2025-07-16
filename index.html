@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YG-1 브랜드 사이트 쿠키 허용 팝업</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="test">
+        <div class="cookie-pop">
+            <!-- 딤드 배경 -->
+            <div class="dim"></div>
+            <!-- 쿠키 설정 팝업 -->
+            <div class="step01">
+                <div class="inner">
+                    <div class="title">
+                        <strong>Çerez Bildirimi</strong>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Şirketimiz olarak sizlere daha iyi hizmet sunabilmek, site kullanımınızı iyileştirmek, kişiselleştirmek ve reklam/pazarlama faaliyetlerini ilgi alanlarınıza göre özelleştirebilmek için çerezlerden yararlanıyoruz.
+                        </p>
+                        <p>
+                            Çerez ayarlarını yönetmek için “Çerezleri Yönet” seçeneğine, tüm çerezlerin kullanımını onaylamak için “Tümünü Kabul Et”, reddetmek için ise Reddet seçeneğine tıklayabilirsiniz. Sitemizdeki çerezlerle ilgili detaylı bilgi için Çerez Politikası metnini inceleyebilirsiniz.
+                        </p>
+                    </div>
+                    <div class="btn-wrap">
+                        <!-- 모두 허용 -->
+                        <button type="button">Tümünü Kabul Et</button>
+                        <!-- 모두 거부 -->
+                        <button type="button">Tümünü Reddet</button>
+                        <!-- 쿠키 설정 -->
+                        <button class="set-cookie-btn" type="button">Çerezleri Yönet</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 쿠키 사용자 맞춤 설정 팝업 -->
+            <div class="step02">
+                <div class="inner">
+                    <div class="con-wrap">
+                        <div class="title">
+                            <strong>Çerezleri Yönet</strong>
+                            <button class="close-btn" type="button"></button>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="top">
+                                    <strong>Zorunlu Çerezler</strong>
+                                    <span>Her zaman etkin</span>
+                                </div>
+                                <p class="info">
+                                    Bu çerezler, web sitesinin temel işlevlerinin 
+                                    (örneğin dil ayarları gibi) düzgün bir şekilde 
+                                    çalışabilmesi için gereklidir. Web sitesinin 
+                                    işletilmesi için kesinlikle gerekli olup yalnızca 
+                                    şirketin dahili sistemleri tarafından yönetilir ve 
+                                    kullanıcılar tarafından devre dışı bırakılamazlar.
+                                </p>
+                            </div>
+                            <div class="item">
+                                <div class="top">
+                                    <strong>Pazarlama Çerezleri</strong>
+                                    <div class="switch-wrap">
+                                        <label>
+                                            <input role="switch" name="switch" type="checkbox"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <p class="info">
+                                    Bu çerezler, Google Analytics (GA) gibi araçlar aracılığıyla web sitesindeki ziyaretçi sayısını ve kullanıcı davranışlarını analiz etmek için kullanılır.
+                                    Hizmet performansını iyileştirmeye veya pazarlama etkinliğini ölçmeye yardımcı olurlar.
+                                    Üçüncü taraf çerezleri içerebilirler ve toplanan tüm veriler kimlik belirlemeye olanak tanımayacak şekilde anonim olarak işlenir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <!-- 선택 허용 -->
+                        <button type="button">Seçilenleri Onayla</button>
+                        <!-- 모두 허용 -->
+                        <button type="button">Tümünü Kabul Et</button>
+                        <!-- 모두 거부 -->
+                        <button type="button">Tümünü Reddet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $(".set-cookie-btn").on("click", function(){
+                $(this).closest(".step01").css("z-index", "0");
+                $(this).closest(".step01").siblings(".step02").addClass("on");
+            });
+            $(".cookie-pop .step02 .close-btn").on("click", function(){
+                $(this).closest(".step02").removeClass("on");
+                $(this).closest(".step02").siblings(".step01").css("z-index", "3000");
+            });
+        });
+    </script>
+</body>
+</html>
