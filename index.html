@@ -95,14 +95,18 @@
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
+
         setVhUnit();
         window.addEventListener('resize', setVhUnit);
-        $(function(){
-            $(".set-cookie-btn").on("click", function(){
+
+        $(function () {
+            $(".set-cookie-btn").on("click", function () {
+                setVhUnit(); // 팝업 열기 직전에 다시 계산
                 $(this).closest(".step01").css("z-index", "0");
                 $(this).closest(".step01").siblings(".step02").addClass("on");
             });
-            $(".cookie-pop .step02 .close-btn").on("click", function(){
+
+            $(".cookie-pop .step02 .close-btn").on("click", function () {
                 $(this).closest(".step02").removeClass("on");
                 $(this).closest(".step02").siblings(".step01").css("z-index", "3000");
             });
