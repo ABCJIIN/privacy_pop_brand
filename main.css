@@ -123,7 +123,7 @@
 .cookie-pop .step02 .item:nth-of-type(1) {
     margin-bottom: 30px;
 }
-.cookie-pop .step02 .item .item-wrap {
+.cookie-pop .step02 .item-wrap {
     max-height: calc((var(--vh, 1vh) * 100) - 302px); /* Safari 대응 */
     overflow-y: auto;
 }
