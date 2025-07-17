@@ -180,15 +180,15 @@
         }
 
         /* 토글(스위치) 버튼 */
-        .cookie-pop .switch-wrap {
+        .cookie-pop .pop-switch-wrap {
             display: inline-flex;
         }
-        .cookie-pop .switch-wrap label {
+        .cookie-pop .pop-switch-wrap label {
             display: inline-flex;
             align-items: center;
             cursor: pointer;
         }
-        .cookie-pop .switch-wrap label input[type="checkbox"] {
+        .cookie-pop .pop-switch-wrap label input[type="checkbox"] {
             appearance: none;
             position: relative;
             border: 1px solid #222;
@@ -198,7 +198,7 @@
             height: 21px;
             cursor: pointer;
         }
-        .cookie-pop .switch-wrap label input[type="checkbox"]::before {
+        .cookie-pop .pop-switch-wrap label input[type="checkbox"]::before {
             content: "";
             position: absolute;
             top: 50%;
@@ -211,10 +211,10 @@
             transition: all 0.25s linear;
             z-index: 1;
         }
-        .cookie-pop .switch-wrap label input[type="checkbox"]:checked {
+        .cookie-pop .pop-switch-wrap label input[type="checkbox"]:checked {
             background-color: #000;
         }
-        .cookie-pop .switch-wrap label input[type="checkbox"]:checked::before {
+        .cookie-pop .pop-switch-wrap label input[type="checkbox"]:checked::before {
             background: #fff;
             left: calc(100% - 18px);
         }
@@ -283,7 +283,7 @@
                         <div class="item">
                             <div class="top">
                                 <strong>Pazarlama Çerezleri</strong>
-                                <div class="switch-wrap">
+                                <div class="pop-switch-wrap">
                                     <label>
                                         <input role="switch" name="switch" type="checkbox"/>
                                     </label>
@@ -332,4 +332,5 @@
         });
     </script>
 </body>
+</html>
 </html>
